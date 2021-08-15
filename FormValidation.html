@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> HTML Form Validation</title>
+	<style type="text/css">
+		input{
+			width: 600px;
+			height: 35px;
+			border-radius: 5px;
+			border: 2px solid blue;
+			font-size: 20px;
+
+		}
+		#btn{
+			background-color: green;
+			color: white;
+			font-size: 20px;
+			border-radius: 0px 50px;
+		}
+		#btn:hover{
+			background-color: blue;
+		}
+		span{
+			color: red;
+			font-size: 25px;
+
+		}
+	</style>
+</head>
+<body>
+   <h1 style="color:white;background-color: green;"  align="center">HTML Form Validation</h1>
+
+
+
+
+<form action="#" autocomplete="on" onsubmit="return validation()"> 
+	<table cellspacing="15" align="center" style="margin-top: 50px;">
+
+
+		<tr><td><br><input type="text" id="user" placeholder="User Name"><br>
+			<span id="userer"></span></td></tr>
+		<tr><td><input type="Password" id="pass" placeholder="Password"><br>
+			<span id="passs"></span></td></tr>
+		<tr><td><input type="Password" id="conpass" placeholder="Confirm Password"><br>
+			<span id="conpasss"></span></td></tr>
+		<tr><td><input type="text" id="email" placeholder="Email"><br>
+			<span id="emaill"></span></td></tr>
+		<tr><td><input type="text" id="mobile" placeholder="Mobile Number"><br>
+			<span id="mobilee"></span></td></tr>
+			<br><span ></span>
+    <tr><td><input type="submit" id="btn" placeholder=""></td></tr>
+	</table>
+</form>
+
+
+
+<script type="text/javascript">
+	function validation() {
+		var user=document.getElementById('user').value;
+		var password=document.getElementById('pass').value;
+		var conpass=document.getElementById('conpass').value;
+		var email=document.getElementById('email').value;
+		var mobile=document.getElementById('mobile').value;
+		if (user == "") {
+			document.getElementById('userer').innerHTML="**Please write a user name correctly**";
+
+		}
+		if (password == "") {
+			document.getElementById('passs').innerHTML="**Please write a password **";
+
+		}
+		if (conpass == "") {
+			document.getElementById('conpasss').innerHTML="**Please write a password **";
+
+		}
+		if (email == "") {
+			document.getElementById('emaill').innerHTML="**Please write a password **";
+
+		}
+		if (mobile == "") {
+			document.getElementById('mobilee').innerHTML="**Please write a password **";
+
+		}
+		if (password==conpass) {
+			document.getElementById('').innerHTML="** Password doesnot match **";
+
+		}
+		
+
+		
+	}
+</script>
+
+
+</body>
+</html>
